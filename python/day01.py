@@ -33,3 +33,16 @@ result = findNumbersOfThree(numbers)
 stop = time.monotonic()
 print(result)
 print(stop-start)
+
+# Using combinations
+
+import math
+from itertools import combinations
+
+pairs = [pair for pair in combinations(numbers, 2) if sum(pair) == 2020]
+result = math.prod(pairs[0])
+print(result)
+
+tripples = [tripple for tripple in combinations(numbers, 3) if sum(tripple) == 2020]
+result = math.prod(tripples[0])
+print(result)
