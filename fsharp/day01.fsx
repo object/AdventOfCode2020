@@ -18,15 +18,15 @@ module DayOne =
                 | Some result -> Some result
                 | None -> findNwithSum sum n tail accSum accNumbers
     
-    let expenses =
+    let numbers =
         File.ReadAllLines(__SOURCE_DIRECTORY__ + "/../data/input01.txt")
         |> Seq.toList
         |> List.map Int32.Parse 
 
-    findNwithSum 2020 2 expenses 0 [] 
+    findNwithSum 2020 2 numbers 0 [] 
     |> Option.map (fun numbers -> numbers |> List.reduce (*))
     |> Option.defaultValue 0
 
-    findNwithSum 2020 3 expenses 0 [] 
+    findNwithSum 2020 3 numbers 0 [] 
     |> Option.map (fun numbers -> numbers |> List.reduce (*))
     |> Option.defaultValue 0
