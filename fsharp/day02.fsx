@@ -23,7 +23,7 @@ module DayTwo =
         }
 
     let rules = 
-        File.ReadAllLines "Data/input02.txt"
+        File.ReadAllLines(__SOURCE_DIRECTORY__ + "/../data/input02.txt")
         |> Array.map parseRule
 
     // Part One
