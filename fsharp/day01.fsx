@@ -23,10 +23,12 @@ module DayOne =
         |> Seq.toList
         |> List.map Int32.Parse 
 
+    // Part One
     findNwithSum 2020 2 numbers 0 [] 
     |> Option.map (fun numbers -> numbers |> List.reduce (*))
     |> Option.defaultValue 0
 
+    // Part Two
     findNwithSum 2020 3 numbers 0 [] 
     |> Option.map (fun numbers -> numbers |> List.reduce (*))
     |> Option.defaultValue 0
