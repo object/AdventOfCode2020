@@ -203,3 +203,4 @@ appSettings.json
 
 # Ionide
 .ionide/
+.vscode/
