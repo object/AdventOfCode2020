@@ -1,5 +1,3 @@
-import time
-
 with open("./data/input02.txt") as inputFile:
     input = inputFile.readlines()
 
@@ -19,5 +17,8 @@ for line in input:
     if sample[first-1] == char and sample[second-1] != char or sample[first-1] != char and sample[second-1] == char:
         valid_count2 += 1
 
+# Part One
 print(valid_count1)
+
+# Part Two
 print(valid_count2)

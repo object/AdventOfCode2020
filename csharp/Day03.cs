@@ -14,9 +14,9 @@ namespace AdventOfCode2020
         {
             var area = GetArea(lines);
             var count = 0;
-            for (int x = 0, y = 0; x < area.Count(); x += 1, y += 3)
+            for (int x = 0, y = 0; y < area.Count(); x += 3, y += 1)
             {
-                count += area[x][y % area[0].Count()];
+                count += area[y][x % area[0].Count()];
             }
             return count;
         }
